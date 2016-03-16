@@ -3,11 +3,32 @@
   <head>
     <title>Dino Bike Map Dino</title>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvCZdb4sMuVkVx9GnYl5n5bI8ujNNaiSg"></script>
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <link rel="stylesheet" href="build/css/styles.css">
   </head>
   <body>
-    <h1>beep boop</h1>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 id="title">Dinobikemap</h1> <img id="dinobike" src="/img/dinobike.png">
+      </div>
+      <h1>beep boop</h1>
+      <p id="dinoText"></p>
+      <hr>
+      <div class="row">
+        <div class="col-md-6 searchForm">
+          <label for="zipSearch">Search for bikes you stole:</label><br>
+          <input type="number" id="zipSearch"><br><br>
+          <button id="searchButton" type="button" class="btn btn-danger">surch</button>
+        </div>
+        <div class="col-md-6">
+          <div id="googleMap">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
   </body>
 </html>
