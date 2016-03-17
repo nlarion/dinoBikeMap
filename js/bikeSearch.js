@@ -13,6 +13,12 @@ exports.addMarker = function(map, zip, geocoder){
       var stolenLocation = response.bikes[i].stolen_location;
       var image = response.bikes[i].large_img;
       getMarkerPosition(stolenLocation, myTitle, image, map, geocoder, markers);
+      if(response.bikes[i].thumb == null){
+        $('#killMe').append("<ul><li>"+myTitle+"</li><li>"+stolenLocation+"</li></ul>");
+      } else {
+        $('#killMe').append("<ul><li>"+myTitle+"</li><li>"+stolenLocation+"</li><li><img src='"+response.bikes[i].thumb+"'</img></li></ul>")
+      }
+
     }
   });
 };
