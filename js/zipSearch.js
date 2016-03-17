@@ -8,4 +8,4 @@ exports.geocodeAddress = function(geocoder, resultsMap) {
        alert('Geocode was not successful for the following reason: ' + status);
      }
    });
-}
+};
