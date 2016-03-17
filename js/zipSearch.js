@@ -1,6 +1,5 @@
 
 exports.geocodeAddress = function(geocoder, resultsMap) {
-  console.log(resultsMap);
    var address = document.getElementById('zipSearch').value;
    geocoder.geocode({'address': address}, function(results, status) {
      if (status === google.maps.GeocoderStatus.OK) {

@@ -1,4 +1,5 @@
 var initMap = require('./../js/map.js').initMap;
+var addMarker = require('./../js/bikeSearch.js').addMarker;
 var geocodeAddress = require('./../js/zipSearch.js').geocodeAddress;
 var geocoder = new google.maps.Geocoder();
 var map;
@@ -9,8 +10,8 @@ $(document).ready(function(){
   getDinos.then(fillContainer, oops);
   $('#searchButton').click(function(){
     var zip = $('#zipSearch').val();
-      console.log(map);
     geocodeAddress(geocoder, map);
+    addMarker(map, zip, geocoder);
   });
 });
 
